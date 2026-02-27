@@ -1,0 +1,33 @@
+:root {
+    --verde-principal: #2D5A27;  /* Verde bosque profundo */
+    --verde-claro: #A8D08D;      /* Verde suave para acentos */
+    --blanco-fondo: #F9FBFA;     /* Blanco roto para no cansar la vista */
+    --texto-oscuro: #1A1A1A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--blanco-fondo);
+    color: var(--texto-oscuro);
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--verde-principal);
+}
+
+.btn-primary {
+    background-color: var(--verde-principal);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-principal);
+}
