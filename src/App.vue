@@ -3,32 +3,26 @@
     <nav class="navbar">
       <div class="logo">🌿 <span>Eco</span>Web</div>
       <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#guia">Guía</a>
-        <a href="#mapa">Puntos</a>
-        <button class="btn-cta">¡Participar!</button>
+        <router-link to="/" class="nav-item">Inicio</router-link>
+        <router-link to="/guia" class="nav-item">Guía de Reciclaje</router-link>
+        <a href="#mapa" class="nav-item">Puntos</a>
+        
+        <router-link to="/guia" class="btn-cta">¡Empezar a Reciclar!</router-link>
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Pequeñas acciones, <br> <span class="highlight">grandes cambios.</span></h1>
-        <p>Aprende a separar tus residuos de forma correcta y descubre puntos de reciclaje cerca de tu comunidad.</p>
-        <div class="hero-btns">
-          <router-link to="/guia" class="btn-primary">Explorar Guía</router-link>
-          <button class="btn-secondary">Ver Mapa</button>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="image-card">
-          <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=500" alt="Reciclaje">
-        </div>
-      </div>
-    </header>
+    <main class="main-content">
+      <router-view></router-view>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 EcoWeb - Proyecto de Conciencia Ambiental</p>
+    </footer>
   </div>
 </template>
 
 <style>
+/* Estilos Globales */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 :root {
@@ -40,23 +34,68 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: var(--light); 
+  color: var(--dark); 
+}
 
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: white; }
-.logo { font-weight: 800; font-size: 1.5rem; color: var(--dark); }
+/* Estilos del Header */
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 8%; 
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo { font-weight: 800; font-size: 1.5rem; }
 .logo span { color: var(--primary); }
-.nav-links a { margin: 0 15px; text-decoration: none; color: var(--dark); font-weight: 500; }
-.btn-cta { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; }
 
-.hero { display: grid; grid-template-columns: 1fr 1fr; padding: 80px 8%; align-items: center; gap: 40px; }
-.badge { background: #E8F5E9; color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
-h1 { font-size: 4rem; line-height: 1.1; margin: 20px 0; font-weight: 800; }
-.highlight { color: var(--primary); }
-p { font-size: 1.1rem; color: #555; margin-bottom: 30px; }
+.nav-links { display: flex; align-items: center; gap: 25px; }
 
-.hero-btns button { padding: 15px 30px; border-radius: 8px; border: none; font-weight: 600; cursor: pointer; margin-right: 15px; }
-.btn-primary { background: var(--primary); color: white; }
-.btn-secondary { background: #E0E0E0; color: var(--dark); }
+.nav-item { 
+  text-decoration: none; 
+  color: var(--dark); 
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-.image-card img { width: 100%; border-radius: 20px; shadow: 20px 20px 60px #bebebe; }
+.nav-item:hover, .router-link-active { 
+  color: var(--primary); 
+}
+
+/* El botón del Header */
+.btn-cta { 
+  background: var(--primary); 
+  color: white; 
+  border: none; 
+  padding: 12px 24px; 
+  border-radius: 50px; 
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-cta:hover { 
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.main-content {
+  min-height: 80vh; /* Para que el footer siempre esté abajo */
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
 </style>

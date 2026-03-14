@@ -4,7 +4,11 @@ import GuiaView from '../views/GuiaView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
-  { path: '/guia', component: GuiaView }
+  {
+  path: '/guia',
+  name: 'guia',
+  component: () => import('../views/GuiaView.vue')
+}
 ]
 
 const router = createRouter({
