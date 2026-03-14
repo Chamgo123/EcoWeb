@@ -15,7 +15,7 @@
         <h1>Pequeñas acciones, <br> <span class="highlight">grandes cambios.</span></h1>
         <p>Aprende a separar tus residuos de forma correcta y descubre puntos de reciclaje cerca de tu comunidad.</p>
         <div class="hero-btns">
-          <button class="btn-primary">Explorar Guía</button>
+          <router-link to="/guia" class="btn-primary">Explorar Guía</router-link>
           <button class="btn-secondary">Ver Mapa</button>
         </div>
       </div>
