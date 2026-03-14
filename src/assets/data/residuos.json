@@ -1,0 +1,5 @@
+[
+  { "id": 1, "material": "Papel", "color": "Gris", "instruccion": "Debe estar seco y limpio." },
+  { "id": 2, "material": "Botella PET", "color": "Azul", "instruccion": "Lavar y aplastar." },
+  { "id": 3, "material": "Pilas", "color": "Rojo", "instruccion": "Llevar a punto de acopio especial." }
+]
