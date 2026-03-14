@@ -12,7 +12,6 @@
 
     <header class="hero">
       <div class="hero-content">
-        <span class="badge">Sprint 2: Prototipo Base</span>
         <h1>Pequeñas acciones, <br> <span class="highlight">grandes cambios.</span></h1>
         <p>Aprende a separar tus residuos de forma correcta y descubre puntos de reciclaje cerca de tu comunidad.</p>
         <div class="hero-btns">
