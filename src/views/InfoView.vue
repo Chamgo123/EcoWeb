@@ -21,7 +21,7 @@
       <div class="info-card">
         <div class="number">03</div>
         <h3>El Equipo</h3>
-        <p>Desarrollado con pasión por un equipo enfocado en tecnología y sostenibilidad para el Sprint 2 de EcoWeb.</p>
+        <p>Desarrollado con pasión por un equipo enfocado en tecnología y sostenibilidad.</p>
       </div>
     </div>
 
