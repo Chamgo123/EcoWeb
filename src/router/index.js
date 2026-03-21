@@ -4,11 +4,12 @@ import GuiaView from '../views/GuiaView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
-  {
-  path: '/guia',
-  name: 'guia',
-  component: () => import('../views/GuiaView.vue')
-}
+{
+path: '/guia',
+name: 'guia',
+component: () => import('../views/GuiaView.vue')
+},
+{ path: '/mapa', component: () => import('../views/MapaView.vue') }
 ]
 
 const router = createRouter({

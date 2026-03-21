@@ -35,6 +35,16 @@
         <p>Reduce tu huella de carbono con mejores hábitos.</p>
       </div>
     </section>
+    <section class="fun-fact-section">
+      <div class="fact-card">
+        <div class="fact-content">
+          <span class="fact-label">💡 Sabías que...</span>
+          <h2>Reciclar una sola **lata de aluminio** ahorra energía suficiente para hacer funcionar un televisor durante **3 horas**.</h2>
+          <p>Imagina lo que podemos lograr si toda tu colonia se une al movimiento.</p>
+        </div>
+        <div class="fact-decor">🌱</div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -168,5 +178,30 @@ p {
   .benefits-grid { grid-template-columns: 1fr; }
   p { margin: 0 auto 30px; }
   .hero-actions { justify-content: center; }
+}
+.fun-fact-section {
+  padding: 60px 0;
+}
+.fact-card {
+  background: linear-gradient(135deg, #2d5a27 0%, #4caf50 100%);
+  color: white;
+  padding: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+.fact-content { max-width: 70%; position: relative; z-index: 2; }
+.fact-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+.fact-card h2 { font-size: 2rem; margin: 15px 0; line-height: 1.3; }
+.fact-decor {
+  font-size: 10rem;
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  opacity: 0.1;
+  transform: rotate(-15deg);
 }
 </style>
