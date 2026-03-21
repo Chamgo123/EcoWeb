@@ -5,9 +5,7 @@
       <div class="nav-links">
         <router-link to="/" class="nav-item">Inicio</router-link>
         <router-link to="/guia" class="nav-item">Guía de Reciclaje</router-link>
-        <router-link to="/mapa" class="nav-item">Puntos</router-link>
-        <a href="#mapa" class="nav-item">Puntos</a>
-        
+        <router-link to="/mapa" class="nav-item">Puntos</router-link>        
         <router-link to="/guia" class="btn-cta">¡Empezar a Reciclar!</router-link>
       </div>
     </nav>
