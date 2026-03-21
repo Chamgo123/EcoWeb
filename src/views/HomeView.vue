@@ -10,7 +10,7 @@
         </p>
         <div class="hero-actions">
           <router-link to="/guia" class="btn-main">Comenzar Guía</router-link>
-          <a href="#info" class="btn-sub">Saber más</a>
+          <router-link to="/info" class="btn-sub">Saber más</router-link>
         </div>
       </div>
       <div class="hero-image">
