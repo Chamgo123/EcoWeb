@@ -30,6 +30,27 @@
       <router-link to="/guia" class="btn-main">Ir a la Guía Ahora</router-link>
     </section>
   </div>
+  <section class="faq-section">
+  <h2 class="faq-title">Preguntas Frecuentes</h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <h4>¿Debo lavar los envases antes de reciclarlos?</h4>
+      <p>Sí. Restos de comida o líquidos pueden contaminar otros materiales y hacer que todo el lote sea rechazado.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Qué materiales NO se pueden reciclar en EcoWeb?</h4>
+      <p>Por ahora no aceptamos unicel (EPS), cerámica, papel carbón o espejos rotos debido a la complejidad de su proceso.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿Cómo reporto un nuevo centro de acopio?</h4>
+      <p>Puedes usar el botón "Participar" en el menú principal para enviarnos la ubicación y validarla.</p>
+    </div>
+    <div class="faq-item">
+      <h4>¿El servicio tiene algún costo?</h4>
+      <p>No, EcoWeb es una plataforma gratuita impulsada por estudiantes para el beneficio de la comunidad mexicana.</p>
+    </div>
+  </div>
+</section>
 </template>
 
 <style scoped>
@@ -75,5 +96,16 @@
   text-decoration: none; 
   font-weight: 700;
   display: inline-block;
+}
+.faq-section { margin-top: 80px; padding-top: 60px; border-top: 1px solid #eee; }
+.faq-title { text-align: center; margin-bottom: 40px; color: #2d5a27; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.faq-item { background: #f9fdf9; padding: 25px; border-radius: 15px; }
+.faq-item h4 { color: #1a1a1a; margin-bottom: 10px; font-size: 1.1rem; }
+.faq-item p { color: #666; font-size: 0.95rem; line-height: 1.5; }
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: 1fr; }
 }
 </style>
