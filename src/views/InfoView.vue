@@ -38,7 +38,7 @@
       <p>Sí. Restos de comida o líquidos pueden contaminar otros materiales y hacer que todo el lote sea rechazado.</p>
     </div>
     <div class="faq-item">
-      <h4>¿Qué materiales NO se pueden reciclar en EcoWeb?</h4>
+      <h4>¿Qué materiales NO se pueden reciclar?</h4>
       <p>Por ahora no aceptamos unicel (EPS), cerámica, papel carbón o espejos rotos debido a la complejidad de su proceso.</p>
     </div>
     <div class="faq-item">
