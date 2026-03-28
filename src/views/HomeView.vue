@@ -19,21 +19,25 @@
     </section>
 
     <section id="info" class="benefits-grid">
-      <div class="benefit-card">
+      <router-link to="/guia" class="benefit-card">
         <div class="b-icon">🌎</div>
         <h3>Educa</h3>
         <p>Conoce la clasificación correcta de cada material.</p>
-      </div>
-      <div class="benefit-card">
+        <span class="card-link">Explorar guía →</span>
+      </router-link>
+      <router-link to="/mapa" class="benefit-card">
         <div class="b-icon">📍</div>
         <h3>Ubica</h3>
         <p>Encuentra centros de acopio cercanos a tu comunidad.</p>
-      </div>
-      <div class="benefit-card">
+        <span class="card-link">Ver mapa →</span>
+      </router-link>
+      <router-link to="/info" class="benefit-card">
         <div class="b-icon">🌱</div>
         <h3>Impacta</h3>
         <p>Reduce tu huella de carbono con mejores hábitos.</p>
-      </div>
+        <span class="card-link">Saber más →</span>
+      </router-link>
+
     </section>
     <section class="fun-fact-section">
       <div class="fact-card">
@@ -139,34 +143,67 @@ p {
 /* Benefits Grid */
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   padding: 60px 0;
   border-top: 1px solid #eee;
 }
 
+/* Estilizamos el router-link como una tarjeta */
 .benefit-card {
   text-align: center;
-  padding: 30px;
+  padding: 40px 30px;
   background: white;
-  border-radius: 20px;
-  transition: 0.3s;
+  border-radius: 24px;
+  text-decoration: none; /* Quitamos el subrayado del link */
+  color: inherit;       /* Mantenemos el color del texto original */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
+/* Efecto al pasar el ratón */
 .benefit-card:hover {
-  background: #f9fdf9;
+  background: #fdfdfd;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: #e8f5e9;
 }
 
 .b-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .benefit-card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #1a1a1a;
+  font-size: 1.4rem;
 }
 
+.benefit-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d5a27;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.benefit-card:hover .card-link {
+  opacity: 1;
+}
 /* Responsividad para móviles */
 @media (max-width: 768px) {
   .hero-section {
