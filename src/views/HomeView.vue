@@ -44,7 +44,7 @@
         <div class="fact-content">
           <span class="fact-label">💡 Sabías que...</span>
           <h2>Reciclar una sola **lata de aluminio** ahorra energía suficiente para hacer funcionar un televisor durante **3 horas**.</h2>
-          <p>Imagina lo que podemos lograr si toda tu colonia se une al movimiento.</p>
+          <p class="Fact-info">Imagina lo que podemos lograr si toda tu colonia se une al movimiento.</p>
         </div>
         <div class="fact-decor">🌱</div>
       </div>
@@ -97,6 +97,12 @@ h1 {
 p {
   font-size: 1.2rem;
   color: #555;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+.Fact-info{
+  font-size: 1.2rem;
+  color: #e8f5e9;
   margin-bottom: 40px;
   max-width: 500px;
 }
